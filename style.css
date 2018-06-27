@@ -1,10 +1,114 @@
 body{
-font-family: 'Encode Sans Condensed', sans-serif;
+	font-family: 'Encode Sans Condensed', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background-color: #e3f2fd;
 }
 
+/*Heading*/
+
 .heading-container{
-width: 100%;
-height: 600px;
-float:center;
-background: 
+	width: 100%;
+	min-height: 50px;
+	max-height: 100px;
+	float:center;
+	background: #0d47a1;
+	border-radius: 0px 0px 10px 10px;
+	position: fixed;
+	animation-name: HeadingContainer;
+	animation-duration: 1000ms;
+}
+
+@keyframes HeadingContainer{
+	0%{
+		min-height: 0px;
+		max-height: 0px;
+	}
+
+	100%{
+		min-height: 50px;
+		max-height: 100px;
+	}
+}
+
+.heading{
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 30px;
+	padding: 10px;
+}
+
+.subheading{
+	margin-left: auto;
+	margin-right: auto;
+	float: center;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 10px;
+}
+
+/*Subtext*/
+
+.subtext{
+	width: 100%;
+	min-height: 175px;
+	max-height: 250px;
+	border-radius: 0px 0px 10px 10px;
+	border: 2px solid #b1bfca;
+	animation-name: Subtext;
+	animation-duration: 1000ms;
+	background-color: #FFFFFF;
+	display: inline-block;
+}
+
+@keyframes Subtext{
+	0%{
+		min-height: 0px;
+		max-height: 0px;
+	}
+
+	100%{
+		min-height: 175px;
+		max-height: 250px;
+	}
+}
+
+/*Content*/
+
+.content-container{
+	height: 1000px;
+}
+
+.content{
+	padding: 20px;
+	color: #000000;
+	font-size: 20px;
+	display: inline-block;
+}
+
+/*Hides*/
+
+.hide-1000{
+	opacity: 1;
+	animation-name: Hide1000;
+	animation-duration: 1000ms;
+}
+
+@keyframes Hide1000{
+	0%{
+		opacity: 0;
+	}
+
+	99%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
 }
