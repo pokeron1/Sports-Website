@@ -84,6 +84,7 @@ body{
 
 .content-container{
 	width: 90%;
+	min-height: 200px;
 	float: center;
 	margin-right: auto;
 	margin-left: auto;
@@ -171,4 +172,18 @@ body{
 	100%{
 		opacity: 1;
 	}
+}
+
+/*Team Cards*/
+
+.team-card{
+	height: 70px;
+	width: 60px;
+	background-color: #5e92f3;
+	clear: none;
+}
+
+.team-name{
+	color: #FFFFFF;
+	text-transform: uppercase;
 }
