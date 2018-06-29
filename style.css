@@ -17,6 +17,7 @@ body{
 	position: fixed;
 	animation-name: HeadingContainer;
 	animation-duration: 1000ms;
+	box-shadow: 5px 5px #888888;
 }
 
 @keyframes HeadingContainer{
@@ -39,6 +40,7 @@ body{
 	color: #FFFFFF;
 	font-size: 30px;
 	padding: 10px;
+	text-transform: uppercase;
 }
 
 .subheading{
@@ -81,7 +83,10 @@ body{
 /*Content*/
 
 .content-container{
-	height: 1000px;
+	width: 90%;
+	float: center;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .content{
@@ -89,6 +94,61 @@ body{
 	color: #000000;
 	font-size: 20px;
 	display: inline-block;
+	animation-name: Content;
+	animation-duration: 1000ms;
+}
+
+.content-right{
+	float: right;
+	margin-left: 50%;
+	border: 2px solid #0d47a1;
+	width: 50%;
+	clear: both;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 4px;
+	background-color: #5e92f3;
+	animation-name: Content;
+	animation-duration: 1000ms;
+}
+
+.content-left{
+	float: left;
+	margin-right: 50%;
+	border: 2px solid #0d47a1;
+	width: 50%;
+	clear: both;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 4px;
+	background-color: #5e92f3;
+	animation-name: Content;
+	animation-duration: 1000ms;
+}
+
+.content-centred{
+	float: center;
+	margin-right: auto;
+	margin-left: auto;
+	border: 2px solid #0d47a1;
+	width: 70%;
+	clear: both;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 4px;
+	background-color: #5e92f3;
+	animation-name: Content;
+	animation-duration: 1000ms;
+}
+
+@keyframes Content{
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
 }
 
 /*Hides*/
