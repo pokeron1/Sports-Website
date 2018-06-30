@@ -4,9 +4,26 @@ body{
 	padding: 0px;
 	background-color: #e3f2fd;
 }
+
 .main {
 	margin-top: 40px;
 }
+
+.fade-out{
+	animation-name: PageFadeOut;
+	animation-duration: 700ms;
+}
+
+@keyframes PageFadeOut{
+	0%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
 /*Heading*/
 
 .heading-container{
@@ -189,13 +206,16 @@ body{
 	color: #FFFFFF;
 	text-transform: uppercase;
 }
+
 /*NavBar*/
+
 .dropdown-content{
 	display: none;
 	postion:absolute;
 	min-width:160px;
 
 }
+
 .dropbutton {
 	background-color: #5472d3;
 	color: #FFFFFF;
@@ -203,7 +223,13 @@ body{
 	font-size: 16px;
 	border: none;
 	height: 20px;
+	border-radius: 4px;
 }
+
+.dropbutton:hover{
+	background-color: #0d47a1;
+}
+
 .dropdown {
 	position: relative;
 	display: inline-block;
@@ -214,23 +240,30 @@ body{
 	position: absolute;
 	background-color: #5472d3;
 	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
 	z-index: 2;
+	border-radius: 4px;
+	padding: 5px;
 }
 
-.dropdown-content a {
-	color: #000000;
+.dropdown-content .dropdown-item {
+	color: #FFFFFF;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
+	border-radius: 4px;
 }
-.dropdown-content a:hover {background-color: #002171}
+
+.dropdown-content .dropdown-item:hover {
+	background-color: #002171
+}
+
 .dropdown:hover .dropdown-content {
 	display: block;
+	animation-name: Content;
+	animation-duration: 200ms;
 }
-.dropdown:hover .dropbutton {
-	background-color: #002171;
-}
+
 .navbar{	
 	background-color:#0d47a1;
 	position:fixed;
