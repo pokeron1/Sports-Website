@@ -193,6 +193,25 @@ body{
 	}
 }
 
+@keyframes hover {
+	from {background-color: #5472d3;}
+	to {background-color: #0d47a1;}
+	
+}
+@keyframes unhover{
+	from {background-color: #0d47a1;}
+	to {background-color: #5472d3;}
+}
+#hover-test:hover{
+	animation-name: hover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+#hover-test{
+	animation-name: unhover;
+	animation-duration: 300ms;
+	animation-fill-mode:forwards;
+}
 /*Team Cards*/
 
 .team-card{
@@ -217,17 +236,22 @@ body{
 }
 
 .dropbutton {
-	background-color: #5472d3;
+	
 	color: #FFFFFF;
 	padding: 16px;
 	font-size: 16px;
 	border: none;
 	height: 20px;
 	border-radius: 4px;
+	animation-name: unhover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
 }
 
 .dropbutton:hover{
-	background-color: #0d47a1;
+	animation-name: hover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
 }
 
 .dropdown {
@@ -252,10 +276,15 @@ body{
 	text-decoration: none;
 	display: block;
 	border-radius: 4px;
+	animation-name: unhover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
 }
 
 .dropdown-content .dropdown-item:hover {
-	background-color: #002171
+	animation-name: hover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
 }
 
 .dropdown:hover .dropdown-content {
