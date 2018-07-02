@@ -1,18 +1,30 @@
 var Text=1;
+
 function LinkTo(page) {
 	var body = document.getElementById("body");
 	body.classList.add("fade-out");
 	setTimeout(function(){window.location.href = page;}, 700)
 	Text=1
 }
+
+function ShowText(id){
+	var focus = document.getElementById("focus");
+	focus.style.display = "block";
+	focus.style.height = "100%";
+	focus.style.width = "100%";
+	console.log("working...")
+}
+
 function Next(id){
-	Text=Text+1;
+	Text+=1;
 	ChangeText(id);
 }
+
 function Back(id){
-	Text=Text-1;
+	Text-=1;
 	ChangeText(id);
 }
+
 function ChangeText(id) {
 	switch (Text) {
 		case 0:

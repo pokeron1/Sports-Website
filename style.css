@@ -171,6 +171,43 @@ body{
 	}
 }
 
+/*Overlay*/
+
+.focus{
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0px;
+	left: 0px;
+	animation-name: FocusFadeIn;
+	animation-duration: 700ms;
+}
+
+@keyframes{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+.overlay-box{
+	min-width: 70%;
+	max-width: 85%;
+	overflow: auto;
+	height: 1000px;
+	background-color: #0d47a1;
+	border-radius: 4px;
+	float: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 /*Hides*/
 
 .hide-1000{
@@ -300,5 +337,7 @@ body{
 	width:110%;
 	height:40px;
 	z-index:2;
-	color:#FFFFFF
+	clear: none;
+	box-sizing: content-box;
+	color:#FFFFFF;
 }
