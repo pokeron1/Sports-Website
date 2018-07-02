@@ -10,8 +10,8 @@
 
 <div class="main">
 	<div class= "heading-container">
-		<div class = "heading">2018 Fifa world cup</div>
-		<div class = "subheading">Russia</div>
+		<div class = "heading">Teams</div>
+		<div class = "subheading">2018 FIFA World Cup | Russia</div>
 	</div>
 	<div class="navbar">
 	<span class="dropbutton" onclick="LinkTo('index.html')">Home</span>
@@ -34,15 +34,40 @@
 
 	<div class="content-container">
 		<div class="content-right">
-			<div class="content">Hello and welcome to the website</div>
+			<div class="content">Latest Scores</div>
 		</div>
 		<div class="content-centred">
-			<div class="content">This is really basic</div>
+			<div class="content">We will improve</div>
 		</div>
 		<div class="content-left">
-			<div class="content">And not at all the final look... I promise...</div>
+			<div class="content">Can You keep that promise?</div>
 		</div>
+		<div class="content-right">
+			<div class="content">Scroll Functionality test</div>
+		</div>
+		<div class="content-centred" id="hover-test">
+			<div class="content">More Content, hover colour change?</div>
+		</div>
+		
+		<div onclick="ShowOverlay()" class="dropbutton">Hiya</div>
 	</div>
+
+	<div id="overlay">
+		<div id="overlay-box">
+			<div class="" id="change">
+				<div class="content"> <p> Testing, testing and even more testing.<br /> 
+				Test to see how this handles long content <br />
+				3rd line text here</br>
+				would this be good for live results display, or, more likely, match reports?</br>
+				actually I think This would work for information as well.
+					</p>
+				</div>
+			</div>
+			<p onclick=Next("change");> Click here for more writing</p>
+			<p onclick=Back("change");> Click to go back</p>
+			<div class="close-btn" onclick="HideOverlay()">Close</div>
+			</div>
+		</div>
 
 	<div class="content-container">
 		<div class="team-card">

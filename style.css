@@ -3,6 +3,7 @@ body{
 	margin: 0px;
 	padding: 0px;
 	background-color: #e3f2fd;
+	overflow-x: hidden;
 }
 
 .main {
@@ -173,7 +174,7 @@ body{
 
 /*Overlay*/
 
-.focus{
+#overlay{
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	display: none;
@@ -182,30 +183,59 @@ body{
 	z-index: 10;
 	top: 0px;
 	left: 0px;
-	animation-name: FocusFadeIn;
+}
+
+.overlay-fade-out{
+	animation-name: OverlayFadeOut;
+	animation-duration: 750ms;
+}
+
+.overlay-fade-in{
+	animation-name: OverlayFadeIn;
 	animation-duration: 700ms;
 }
 
-@keyframes{
-	from{
-		opacity: 0;
-	}
 
-	to{
+@keyframes OverlayFadeOut{
+	0%{
 		opacity: 1;
+	}
+	100%{
+		opacity: 0;
 	}
 }
 
-.overlay-box{
-	min-width: 70%;
-	max-width: 85%;
+@keyframes OverlayFadeIn {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+#overlay-box{
+	min-width: 60%;
+	max-width: 75%;
 	overflow: auto;
-	height: 1000px;
+	height: 100%;
 	background-color: #0d47a1;
 	border-radius: 4px;
 	float: center;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.close-btn{
+	padding: 20px;
+	background-color: #5472d3;
+	color: white;
+	border-radius: 4px;
+	box-sizing: content-box;
+	max-width: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.close-btn:hover{
+	background-color: #002171;
 }
 
 /*Hides*/
@@ -235,20 +265,24 @@ body{
 	to {background-color: #0d47a1;}
 	
 }
+
 @keyframes unhover{
 	from {background-color: #0d47a1;}
 	to {background-color: #5472d3;}
 }
+
 #hover-test:hover{
 	animation-name: hover;
 	animation-duration: 300ms;
 	animation-fill-mode: forwards;
 }
+
 #hover-test{
 	animation-name: unhover;
 	animation-duration: 300ms;
 	animation-fill-mode:forwards;
 }
+
 /*Team Cards*/
 
 .team-card{

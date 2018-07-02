@@ -7,12 +7,20 @@ function LinkTo(page) {
 	Text=1
 }
 
-function ShowText(id){
-	var focus = document.getElementById("focus");
-	focus.style.display = "block";
-	focus.style.height = "100%";
-	focus.style.width = "100%";
-	console.log("working...")
+function ShowOverlay(){
+	var overlay = document.getElementById("overlay");
+	overlay.classList.remove("overlay-fade-out");
+	overlay.classList.add("overlay-fade-in");
+	overlay.style.display = "block";
+	overlay.style.height = "100%";
+	overlay.style.width = "100%";
+}
+
+function HideOverlay(){
+	var overlay = document.getElementById("overlay");
+	overlay.classList.remove("overlay-fade-in");
+	overlay.classList.add("overlay-fade-out");
+	setTimeout(function(){overlay.style.display = "none"}, 700);
 }
 
 function Next(id){
