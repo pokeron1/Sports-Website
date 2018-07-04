@@ -54,20 +54,16 @@
 
 	<div id="overlay">
 		<div id="overlay-box">
-			<div class="" id="change">
-				<div class="content"> <p> Testing, testing and even more testing.<br /> 
-				Test to see how this handles long content <br />
-				3rd line text here</br>
-				would this be good for live results display, or, more likely, match reports?</br>
-				actually I think This would work for information as well.
-					</p>
+			<div class="overlay-content">
+				<div class="content-white"  id="change">
+					<div id="1change">Testing, testing and even more testing.</div>
 				</div>
-			</div>
-			<p onclick=Next("change");> Click here for more writing</p>
-			<p onclick=Back("change");> Click to go back</p>
+			<p onclick="Next('change')" class="dropbutton"> Click here for more writing</p>
+			<p onclick="Back('change')" class="dropbutton"> Click to go back</p>
 			<div class="close-btn" onclick="HideOverlay()">Close</div>
 			</div>
 		</div>
+	</div>
 
 	<div class="content-container">
 		<div class="team-card">
@@ -76,7 +72,10 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="script.js"></script>
+
+<div id="2change" class="hidden"><div>Second Text, hello!</div></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
