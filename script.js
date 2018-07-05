@@ -93,3 +93,7 @@
 		}
 		textToChange.innerHTML = changeTo.innerHTML;
 	}
+
+	function ChangeTheme(theme){
+		document.cookie = `theme=${theme};path=/`;
+	}
