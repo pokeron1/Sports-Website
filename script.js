@@ -14,6 +14,8 @@
 		overlay.style.display = "block";
 		overlay.style.height = "100%";
 		overlay.style.width = "100%";
+		text = 1;
+		ChangeText("change", "1change")
 	}
 
 	function HideOverlay(){
@@ -21,6 +23,7 @@
 		overlay.classList.remove("overlay-fade-in");
 		overlay.classList.add("overlay-fade-out");
 		setTimeout(function(){overlay.style.display = "none"}, 700);
+		text = 1;
 	}
 
 	function Next(id){
@@ -32,6 +35,9 @@
 
 	function Back(id){
 		text-=1;
+		while (text <= 0){
+			text = 1;
+		}
 		var id2 = text.toString() + id;
 		console.log('id2 is '+id2);
 		ChangeText(id, id2);
@@ -59,7 +65,7 @@
 		}
 	}*/
 
-	function ChangeText(id1, id2){
+	/*function ChangeText(id1, id2){
 		var changeTo = document.getElementById(id2).innerHTML;
 		var textToChange = document.getElementById(id1).innerHTML;
 		console.log(`Text index is ${text}`);
@@ -67,10 +73,23 @@
 		console.log(`Should change to ${changeTo}`);
 		while (changeTo == null) {
 			text-= 1;
+			id2 = text.toString() + text;
 			changeTo = document.getElementById(id2);
 			console.log(`changeTo is ${changeTo}`);
 		}
-		textToChange = "changeTo";
+		textToChange = changeTo;
 		console.log(`Displaying ${document.getElementById(id1).innerText}`)
 		console.log(`Should be displaying ${document.getElementById(id2).innerText}`)
+	}*/
+
+	function ChangeText(id1, id2){
+		var changeTo = document.getElementById(id2);
+		var textToChange = document.getElementById(id1);
+		if (changeTo == null) {
+			text -= 1;
+			console.log(text);
+			id2 = text.toString() + id1;
+			ChangeText(id1, id2);
+		}
+		textToChange.innerHTML = changeTo.innerHTML;
 	}
