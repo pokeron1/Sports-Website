@@ -65,9 +65,9 @@
 		console.log(`Text index is ${text}`);
 		console.log(`Should change ${textToChange}`);
 		console.log(`Should change to ${changeTo}`);
-		while (changeTo = null) {
+		while (changeTo == null) {
 			text-= 1;
-			var changeTo = document.getElementById(id2);
+			changeTo = document.getElementById(id2);
 			console.log(`changeTo is ${changeTo}`);
 		}
 		textToChange = "changeTo";
