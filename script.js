@@ -1,10 +1,17 @@
-	var text=1
-
+	/*probably inefficient. Look over my code, will ya? at the bottom is most of my theme code*/
+	var text=1;
+	var theme1=["#e3f2fd","#ffffff","#b1bfca","#0d47a1","#5472d3","#002171"];
+	var theme2=["red","blue","green","#ffff00","#ff00ff","#00ffff"];
+	var themes[theme1,theme2];
+	var customTheme["#e3f2fd","#ffffff","#b1bfca","#0d47a1","#5472d3","#002171"];
+	var savedString="";
+	var newTheme="";
+	var activeTheme= 0;
 	function LinkTo(page) {
 		var body = document.getElementById("body");
 		body.classList.add("fade-out");
-		setTimeout(function(){window.location.href = page;}, 700)
-		text=1
+		setTimeout(function(){window.location.href = page;}, 700);
+		text=1;
 	}
 
 	function ShowOverlay(){
@@ -15,7 +22,7 @@
 		overlay.style.height = "100%";
 		overlay.style.width = "100%";
 		text = 1;
-		ChangeText("change", "1change")
+		ChangeText("change", "1change");
 	}
 
 	function HideOverlay(){
@@ -96,4 +103,44 @@
 
 	function ChangeTheme(theme){
 		document.cookie = `theme=${theme};path=/`;
+	}
+
+	function CreateTheme(){
+		var n=0;
+		while (n<6){
+			savedString+=customTheme[n];
+			savedString+=",";
+			n+=1;
+		document.cookie = `themeColours=`+savedString+`;path=/`;
+		}
+	}
+	function RetrieveTheme(){
+		var cookies= document.cookie.split(";");
+		if (cookies[0].startsWith("themeColours") == true){
+			newTheme= cookies[0].slice(13);
+			newTheme=newTheme.slice(-7);
+			newTheme=newTheme.split(",");
+		}
+		else if (cookies[1].startsWith("themeColours") == true){
+			newTheme= cookies[1].slice(13);
+			newTheme=newTheme.slice(-7);
+			newTheme=newTheme.split(",");
+		}
+		else{
+			newTheme= cookies[2].slice(13);
+			newTheme=newTheme.slice(-7);
+			newTheme=newTheme.split(",");
+		}
+	}
+	function SetTheme(){
+		var n=0;
+		while (n<6){
+			themes[activeTheme][n]=newTheme[n];
+			n+=6;
+		}
+	}
+	function runTheme{
+		CreateTheme();
+		RetrieveTheme();
+		SetTheme();
 	}
