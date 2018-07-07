@@ -1,4 +1,4 @@
-	/*probably inefficient. Look over my code, will ya? at the bottom is most of my theme code*/
+	/*definitely inefficient. Look over my code, will ya? at the bottom is most of my theme code*/
 	var text=1;
 	var theme1=["#e3f2fd","#ffffff","#b1bfca","#0d47a1","#5472d3","#002171"];
 	var theme2=["red","blue","green","#ffff00","#ff00ff","#00ffff"];
@@ -7,6 +7,7 @@
 	var savedString="";
 	var newTheme="";
 	var activeTheme= 0;
+	var cookies=""
 	function LinkTo(page) {
 		var body = document.getElementById("body");
 		body.classList.add("fade-out");
@@ -114,7 +115,7 @@
 		document.cookie = `themeColours=`+savedString+`;path=/`;
 		}
 	}
-	function RetrieveTheme(){
+	/*function RetrieveTheme(){
 		var cookies= document.cookie.split(";");
 		if (cookies[0].startsWith("themeColours") == true){
 			newTheme= cookies[0].slice(13);
@@ -131,6 +132,16 @@
 			newTheme=newTheme.slice(-7);
 			newTheme=newTheme.split(",");
 		}
+	}*/
+	function RetrieveTheme(){
+		var n=0
+		var cookies=document.cookie.replace("path=/","");
+		cookies=cookies.split(";");
+		while (cookies[n].startswith("themeColours")==false){
+			n+=1;
+		}
+		newTheme=cookies[n].slice(13);
+		newTheme=newTheme.split(",");
 	}
 	function SetTheme(){
 		var n=0;
@@ -139,8 +150,44 @@
 			n+=6;
 		}
 	}
-	function runTheme{
+	function SaveThemes(){
+		savedString="";
+		var n=0;
+		while (n<6){
+			savedString+=theme1[n];
+			savedString+=",";
+		}
+		document.cookie=`theme1=`+savedString+"path=/"
+		savedString="";
+		var n=0;
+		while (n<6){
+			savedString+=theme2[n];
+			savedString+=",";
+		}
+		document.cookie=`theme2=`+savedString+"path=/"
+	}
+	function LoadThemes{
+		var n=0
+		cookies=document.cookie.replace("path=/","");
+		cookies=cookies.split(";");
+		while (cookies[n].startswith("theme1")==false){
+			n+=1;
+		}
+		cookies=cookies[n].slice(7);
+		theme1=cookies.split(",");
+		n=0
+		cookies=document.cookie.replace("path=/","");
+		cookies=cookies.split(";");
+		while (cookies[n].startswith("theme2")==false){
+			n+=1;
+		}
+		cookies=cookies[n].slice(7);
+		theme2=cookies.split(",");
+		
+	}
+	function RunTheme{
 		CreateTheme();
 		RetrieveTheme();
 		SetTheme();
+		SaveThemes();
 	}
