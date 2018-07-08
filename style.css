@@ -1,8 +1,17 @@
+html{
+	--colour1: #e3f2fd;
+	--colour2: #ffffff;
+	--colour3: #5e92f3;
+	--colour4: #0d47a1;
+	--colour5: #5472d3;
+	--colour6: #002171;
+
+}
 body{
 	font-family: 'Encode Sans Condensed', sans-serif;
 	margin: 0px;
 	padding: 0px;
-	background-color: #e3f2fd;
+	background-color: var(--colour1);
 	overflow-x: hidden;
 }
 
@@ -57,7 +66,7 @@ body{
 	margin-right: auto;
 	float: center;
 	text-align: center;
-	color: #FFFFFF;
+	color: var(--colour2);
 	font-size: 30px;
 	padding: 10px;
 	text-transform: uppercase;
@@ -68,7 +77,7 @@ body{
 	margin-right: auto;
 	float: center;
 	text-align: center;
-	color: #FFFFFF;
+	color: var(--colour2);
 	font-size: 18px;
 	text-transform: uppercase;
 	padding: 10px;
@@ -84,7 +93,7 @@ body{
 	border: 2px solid #b1bfca;
 	animation-name: Subtext;
 	animation-duration: 1000ms;
-	background-color: #FFFFFF;
+	background-color: var(--colour2);
 	display: inline-block;
 }
 
@@ -121,7 +130,7 @@ body{
 
 .content-white{
 	padding: 20px;
-	color: #FFFFFF;
+	color: var(--colour2);
 	font-size: 20px;
 	display: inline-block;
 	animation-name: Content;
@@ -131,13 +140,13 @@ body{
 .content-right{
 	float: right;
 	margin-left: 50%;
-	border: 2px solid #0d47a1;
+	border: 2px solid var(--colour4);
 	width: 50%;
 	clear: both;
 	padding: 20px;
 	margin: 20px;
 	border-radius: 4px;
-	background-color: #5e92f3;
+	background-color: var(--colour3);
 	animation-name: Content;
 	animation-duration: 1000ms;
 }
@@ -145,13 +154,13 @@ body{
 .content-left{
 	float: left;
 	margin-right: 50%;
-	border: 2px solid #0d47a1;
+	border: 2px solid var(--colour4);
 	width: 50%;
 	clear: both;
 	padding: 20px;
 	margin: 20px;
 	border-radius: 4px;
-	background-color: #5e92f3;
+	background-color: var(--colour3);
 	animation-name: Content;
 	animation-duration: 1000ms;
 }
@@ -160,13 +169,13 @@ body{
 	float: center;
 	margin-right: auto;
 	margin-left: auto;
-	border: 2px solid #0d47a1;
+	border: 2px solid var(--colour4);
 	width: 70%;
 	clear: both;
 	padding: 20px;
 	margin: 20px;
 	border-radius: 4px;
-	background-color: #5e92f3;
+	background-color: var(--colour3);
 	animation-name: Content;
 	animation-duration: 1000ms;
 }
@@ -182,7 +191,7 @@ body{
 }
 
 .overlay-content{
- 	color:#FFFFFF;
+ 	color:var(--colour2);
 }
 
 .hidden{
@@ -193,7 +202,7 @@ body{
 
 #overlay{
 	background-color: rgba(0, 0, 0, 0.5);
-	color: #FFFFFF;
+	color: var(--colour2);
 	position: fixed;
 	display: none;
 	width: 100%;
@@ -234,7 +243,7 @@ body{
 	max-width: 75%;
 	overflow: auto;
 	height: 100%;
-	background-color: #0d47a1;
+	background-color: var(--colour4);
 	border-radius: 25px;
 	float: center;
 	margin-right: auto;
@@ -242,7 +251,7 @@ body{
 }
 
 .close-btn{
-	--hover-color:#002171;
+	--hover-color:var(--colour6);
 	padding: 20px;
 	background-color: #9472d3;
 	color: white;
@@ -258,7 +267,7 @@ body{
 }
 
 .close-btn:hover{
-	--hover-color:#002171;
+	--hover-color:var(--colour6);
 	animation-name: hover;
 	animation-duration: 300ms;
 	animation-fill-mode: forwards;
@@ -294,7 +303,7 @@ body{
 }
 
 @keyframes hover {
-	from {background-color: #5472d3;}
+	from {background-color: var(--colour5);}
 	to {background-color: var(--hover-color);}
 	
 }
@@ -302,18 +311,18 @@ body{
 @keyframes unhover{
 	/*#0d47a1*/
 	from {background-color: var(--hover-color);}
-	to {background-color: #5472d3;}
+	to {background-color: var(--colour5);}
 }
 
 #hover-test:hover{
-	--hover-color:#0d47a1;
+	--hover-color:var(--colour4);
 	animation-name: hover;
 	animation-duration: 300ms;
 	animation-fill-mode: forwards;
 }
 
 #hover-test{
-	--hover-color:#0d47a1;
+	--hover-color:var(--colour4);
 	animation-name: unhover;
 	animation-duration: 300ms;
 	animation-fill-mode:forwards;
@@ -329,7 +338,7 @@ body{
 }
 
 .team-name{
-	color: #FFFFFF;
+	color: var(--colour2);
 	text-transform: uppercase;
 }
 
@@ -343,8 +352,8 @@ body{
 }
 
 .dropbutton {
-	--hover-color:#0d47a1;
-	color: #FFFFFF;
+	--hover-color:var(--colour4);
+	color: var(--colour2);
 	padding: 16px;
 	font-size: 16px;
 	border: none;
@@ -356,7 +365,7 @@ body{
 }
 
 .dropbutton:hover{
-	--hover-color:#0d47a1;
+	--hover-color:var(--colour4);
 	animation-name: hover;
 	animation-duration: 300ms;
 	animation-fill-mode: forwards;
@@ -370,7 +379,7 @@ body{
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #5472d3;
+	background-color: var(--colour5);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
 	z-index: 2;
@@ -379,8 +388,8 @@ body{
 }
 
 .dropdown-content .dropdown-item {
-	--hover-color:#0d47a1;
-	color: #FFFFFF;
+	--hover-color:var(--colour4);
+	color: var(--colour2);
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
@@ -391,7 +400,7 @@ body{
 }
 
 .dropdown-content .dropdown-item:hover {
-	--hover-color:#0d47a1;
+	--hover-color:var(--colour4);
 	animation-name: hover;
 	animation-duration: 300ms;
 	animation-fill-mode: forwards;
@@ -404,7 +413,7 @@ body{
 }
 
 .navbar{	
-	background-color:#0d47a1;
+	background-color:var(--colour4);
 	position:fixed;
 	top: 0;
 	width:110%;
@@ -412,5 +421,5 @@ body{
 	z-index:2;
 	clear: none;
 	box-sizing: content-box;
-	color:#FFFFFF;
+	color:var(--colour2);
 }
