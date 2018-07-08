@@ -1,9 +1,9 @@
-	/*definitely inefficient. Look over my code, will ya? at the bottom is most of my theme code*/
+	/*probably inefficient. Look over my code, will ya? at the bottom is most of my theme code*/
 	var text=1;
 	var theme1=["#e3f2fd","#ffffff","#b1bfca","#0d47a1","#5472d3","#002171"];
 	var theme2=["red","blue","green","#ffff00","#ff00ff","#00ffff"];
-	var themes[theme1,theme2];
-	var customTheme["#e3f2fd","#ffffff","#b1bfca","#0d47a1","#5472d3","#002171"];
+	var themes=[theme1,theme2];
+	var customTheme=["#e3f2fd","#ffffff","#b1bfca","#0d47a1","#5472d3","#002171"];
 	var savedString="";
 	var newTheme="";
 	var activeTheme= 0;
@@ -159,15 +159,15 @@
 		}
 		document.cookie=`theme1=`+savedString+"path=/"
 		savedString="";
-		var n=0;
+		n=0;
 		while (n<6){
 			savedString+=theme2[n];
 			savedString+=",";
 		}
 		document.cookie=`theme2=`+savedString+"path=/"
 	}
-	function LoadThemes{
-		var n=0
+	function LoadThemes(){
+		var n=0;
 		cookies=document.cookie.replace("path=/","");
 		cookies=cookies.split(";");
 		while (cookies[n].startswith("theme1")==false){
@@ -185,7 +185,10 @@
 		theme2=cookies.split(",");
 		
 	}
-	function RunTheme{
+	function UseThemes(){
+		var n=0;
+	}
+	function RunTheme(){
 		CreateTheme();
 		RetrieveTheme();
 		SetTheme();
