@@ -12,8 +12,19 @@
 	<div class= "heading-container">
 		<div class = "heading">Teams</div>
 		<div class = "subheading">2018 FIFA World Cup | Russia</div>
-		<button onclick="ChangeTheme(1)">theme</button>
-		<button onclick="ChangeTheme(0)">untheme</button>
+		<button onclick="ChangeTheme()">theme</button>
+		<button onclick="ShowOverlay2()">customise</button>
+		<div id="customise">
+		<div class="overlay-box">
+			<div class="overlay-content">
+				<div class="content-white">
+				<input id="colour1">
+				<input type="submit" name="submit">
+				</div>
+				<div class="close-btn" onclick="HideOverlay2()">Close</div>
+			</div>
+		</div>
+	</div>
 	</div>
 	<div class="navbar">
 	<span class="dropbutton" onclick="LinkTo('index.html')">Home</span>
@@ -55,7 +66,7 @@
 	</div>
 
 	<div id="overlay">
-		<div id="overlay-box">
+		<div class="overlay-box">
 			<div class="overlay-content">
 				<div class="content-white"  id="change">
 					<div id="1change">Testing, testing and even more testing.</div>

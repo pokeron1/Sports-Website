@@ -41,7 +41,7 @@ body{
 	min-height: 50px;
 	max-height: 100px;
 	float:center;
-	background: #0d47a1;
+	background: var(--colour4);
 	border-radius: 0px 0px 10px 10px;
 	position: fixed;
 	animation-name: HeadingContainer;
@@ -212,7 +212,18 @@ body{
 	top: 0px;
 	left: 0px;
 }
+#customise{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: var(--colour2);
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
 
+	z-index: 10;
+	top: 0px;
+	left: 0px;
+}
 .overlay-fade-out{
 	animation-name: OverlayFadeOut;
 	animation-duration: 750ms;
@@ -238,7 +249,7 @@ body{
 	to{opacity: 1;}
 }
 
-#overlay-box{
+.overlay-box{
 	min-width: 60%;
 	max-width: 75%;
 	overflow: auto;
