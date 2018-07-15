@@ -7,7 +7,9 @@
 	var savedString="";
 	var newTheme="";
 	var activeTheme= 0;
-	var cookies=""
+	var cookies="";
+	var x=0;
+	var g=0;
 	var html = document.getElementsByTagName('html')[0];
 	function LinkTo(page) {
 		var body = document.getElementById("body");
@@ -126,6 +128,12 @@
 	}
 	function InputTheme(){
 		customTheme[0]=document.getElementById('colour1').value;
+		customTheme[1]=document.getElementById('colour2').value;
+		customTheme[2]=document.getElementById('colour3').value;
+		customTheme[3]=document.getElementById('colour4').value;
+		customTheme[4]=document.getElementById('colour5').value;
+		customTheme[5]=document.getElementById('colour6').value;
+		RunTheme();
 	}
 	function CreateTheme(){
 		var n=0;
@@ -155,20 +163,16 @@
 		}
 	}*/
 	function RetrieveTheme(){
-		var n=0
-		var cookies=document.cookie.replace("path=/","");
-		cookies=cookies.split(";");
-		while (cookies[n].startswith("themeColours")==false){
-			n+=1;
-		}
-		newTheme=cookies[n].slice(13);
+		cookies=document.cookie.split(";");
+		x=cookies.length;
+		newTheme=cookies[x-1].slice(14);
 		newTheme=newTheme.split(",");
 	}
 	function SetTheme(){
 		var n=0;
 		while (n<6){
 			themes[activeTheme][n]=newTheme[n];
-			n+=6;
+			n+=1;
 		}
 	}
 	function SaveThemes(){
@@ -177,6 +181,7 @@
 		while (n<6){
 			savedString+=theme1[n];
 			savedString+=",";
+			n+=1;
 		}
 		document.cookie=`theme1=`+savedString+"path=/"
 		savedString="";
@@ -184,6 +189,7 @@
 		while (n<6){
 			savedString+=theme2[n];
 			savedString+=",";
+			n+=1
 		}
 		document.cookie=`theme2=`+savedString+"path=/"
 	}
@@ -191,23 +197,24 @@
 		var n=0;
 		cookies=document.cookie.replace("path=/","");
 		cookies=cookies.split(";");
-		while (cookies[n].startswith("theme1")==false){
-			n+=1;
-		}
-		cookies=cookies[n].slice(7);
+		/*for (i=0;cookies[i].startsWith("theme1")==false;i++){
+			n++;
+		}*/
+		cookies=cookies[0].slice(7);
 		theme1=cookies.split(",");
 		n=0
 		cookies=document.cookie.replace("path=/","");
 		cookies=cookies.split(";");
-		while (cookies[n].startswith("theme2")==false){
+		/*for (i=0;cookies[i].startsWith("theme2")==false;i++){
 			n+=1;
-		}
-		cookies=cookies[n].slice(7);
+		}*/
+		cookies=cookies[1].slice(8);
 		theme2=cookies.split(",");
 		
 	}
 	function UseThemes(){
 		var n=0;
+		themes=[theme1,theme2];
 		var theme= getCookie("theme")
 		if (theme!=""){activeTheme=theme;}
 		html.style.setProperty("--colour1", themes[activeTheme][0]);
@@ -222,6 +229,11 @@
 		RetrieveTheme();
 		SetTheme();
 		SaveThemes();
+		UseThemes();
+	}
+	function EnterThemes(){
+		LoadThemes();
+		UseThemes();
 	}
 	function getCookie(cname) {
     var name = cname + "=";
