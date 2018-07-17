@@ -1,7 +1,7 @@
 	/*probably inefficient. Look over my code, will ya? at the bottom is most of my theme code*/
 	var text=1;
 	var theme1=["#e3f2fd","#ffffff","#5e92f3","#0d47a1","#5472d3","#002171"];
-	var theme2=["red","blue","green","#ffff00","#ff00ff","#00ffff"];
+	var theme2=["#1a3e59","#ffffff","#5e92f3","#0d47a1","#4058a5","002171"];
 	var themes=[theme1,theme2];
 	var customTheme=["#e3f2fd","#ffffff","#b1bfca","#0d47a1","#5472d3","#002171"];
 	var savedString="";
@@ -200,17 +200,20 @@
 		/*for (i=0;cookies[i].startsWith("theme1")==false;i++){
 			n++;
 		}*/
-		cookies=cookies[0].slice(7);
-		theme1=cookies.split(",");
+		if (cookies[0].startsWith("theme1")==true){
+			cookies=cookies[0].slice(7);
+			theme1=cookies.split(",");
+		}
 		n=0
 		cookies=document.cookie.replace("path=/","");
 		cookies=cookies.split(";");
 		/*for (i=0;cookies[i].startsWith("theme2")==false;i++){
 			n+=1;
 		}*/
-		cookies=cookies[1].slice(8);
-		theme2=cookies.split(",");
-		
+		if (cookies[1].startsWith(" theme2")==true){
+			cookies=cookies[1].slice(8);
+			theme2=cookies.split(",");
+		}
 	}
 	function UseThemes(){
 		var n=0;
@@ -232,6 +235,7 @@
 		UseThemes();
 	}
 	function EnterThemes(){
+		/*SaveThemes();*/
 		LoadThemes();
 		UseThemes();
 	}
