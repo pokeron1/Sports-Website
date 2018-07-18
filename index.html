@@ -5,6 +5,14 @@
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
 <link rel="icon" href = "img/Logo.png"/>
 <title>2018 FIFA World Cup</title>
+<style type="text/css">
+.content-container{
+	background-image: url(img/ball-and-trophy.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+
+</style>
 </head>
 <body id="body" onload="EnterThemes()">
 
@@ -15,8 +23,8 @@
 	</div>
 	<div class="navbar">
 	<span class="dropbutton" onclick="LinkTo('index.html')">Home</span>
-	<div class="dropdown" onclick="LinkTo('teams.html')">
-		<a class="dropbutton">Teams</a>
+	<div class="dropdown" onclick="LinkTo('groups.html')">
+		<a class="dropbutton">Groups</a>
 		<div class="dropdown-content">
 			<span class="dropdown-item">England</span>
 			<span class="dropdown-item">France</span>
@@ -25,6 +33,8 @@
 		</div>
 	</div>
 	<span class="dropbutton" onclick="LinkTo('test 2.html')">Match Report</span>
+	<span class="dropbutton" onclick="ChangeTheme()">Change theme</span>
+	<span class="dropbutton" onclick="ShowOverlay2()">Customise</span>
 </div>
 
 	<div class="subtext">
@@ -32,24 +42,20 @@
 	</div>
 
 	<div class="content-container">
-		<div class="content-right">
+		<div class="content-centred">
 			<div class="content">This is our website about the World Cup, which this year (2018) took place in Russia.</div>
 		</div>
-		<div class="content-centred">
+		<div class="content-right">
 			<div class="content">In the World Cup, 32 different countries' teams compete for the title of World Champions.</div>
 		</div>
 		<div class="content-left">
 			<div class="content">First there are the group stages, where 4 teams per group try to get as many points to go through to the knockout stages. Only 2 from each group will go through. Teams score 3 points for a win, 1 point for a draw, and 0 points for a loss.</div>
 		</div>
-		<div class="content-centred">
-			<div class="content"></div>
+		<div class="content-centred"><div class="content">In order to make it into the World Cup tournament, or 'finals', teams must first face other countries from that area, so making it to one of the top 32 teams and into the finals is already an achievement.</div>
 		</div>
-	</div>
-
-	<div class="content-container">
-		<div class="team-card">
-			<div class="team-name">England</div>
+		<div class="content-left"><div class="content">During the group stage, to progress to the knockout stages, teams must face every other team in their group, after which points totals are counted up. If teams draw, they go to a long line of alternative methods of deciding, including goal difference, goals scored, even number of bookings, and finally a coin flip.</div>
 		</div>
+		<div class="content-right"><div class="content">During the knockout stages, games must be won (or lost) on the day. If, after 90 minutes plus stoppage time, both teams are equal, it goes to an extra two halves of 15 minutes each, and then penalties.</div></div>
 	</div>
 </div>
 
