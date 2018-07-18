@@ -39,17 +39,20 @@
 	</div>
 	<div class="navbar">
 	<span class="dropbutton" onclick="LinkTo('index.html')">Home</span>
-	<div class="dropdown" onclick="LinkTo('groups.html')">
-		<a class="dropbutton">Groups</a>
+	<div class="dropdown">
+		<a class="dropbutton" onclick="LinkTo('groups.html')">Groups</a>
 		<div class="dropdown-content">
-			<span class="dropdown-item">England</span>
-			<span class="dropdown-item">France</span>
-			<span class="dropdown-item">Croatia</span>
-			<span class="dropdown-item">Belgium</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '1change')">A</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '2change')">B</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '3change')">C</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '4change')">D</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '5change')">E</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '6change')">F</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '7change')">G</span>
+			<span class="dropdown-item" onclick="ChangeAndOpen('change', '8change')">H</span>
 		</div>
 	</div>
 	<span class="dropbutton" onclick="LinkTo('test 2.html')">Match Report</span>
-	<span class="dropbutton">Match Report</span>
 	<span class="dropbutton" onclick="ChangeTheme()">Change theme</span>
 	<span class="dropbutton" onclick="ShowOverlay2()">Customise</span>
 </div>
@@ -59,13 +62,21 @@
 	</div>
 
 	<div class="content-container">
+		<br><br>
 		<div class="content-right">
-			<div class="content">As mentioned in <span onclick="LinkTo('index.html')" class="content-link">the home page</span>, the groups are used to whittle down the teams from 32 to 16. This means that while not <em>as</em> important as in the knockout stages, losing matches could as good as guarantee your departure from the tournament.</div>
+			<div class="content"><br>As mentioned in <span onclick="LinkTo('index.html')" class="content-link">the home page</span>, the groups are used to whittle down the teams from 32 to 16. This means that while not <em>as</em> important as in the knockout stages, losing matches could as good as guarantee your departure from the tournament.<br></div>
 		</div>
+		<br><br>
+		<div class="content-left"><div class="content"><br>While we cannot provide a very comprehensive piece on each group, we hope you find this useful to learn more about the teams taking part in the 2018 World Cup in Russia.<br></div>
+		</div>
+		<br><br>
 		<div class="content-centred">
-			<div class="content">Below are all the groups, with their respective teams and information.</div>
+			<div class="content"><br>Below are all the groups, with their respective teams and information.<br></div>
 		</div>
-		<div onclick="ShowOverlay()" class="dropbutton" style="font-size:1.2em;">World cup groups</div>
+		<br><br>
+		<div onclick="ShowOverlay()" class="dropbutton" style="font-size:1.2em;">All World Cup groups</div>
+
+		<div class="footer">This website was created by Mohammed Raunaq Shah Foridi, Dylan Datta, Samay Patel and Akshat Sharma, and is therefore protected by copyright under English law. This website uses cookies in order to save custom combinations of colours - 'themes' and remember them between pages. If you do not want this, sorry, we can't exactly change it that easily.</div>
 	</div>
 
 	<div id="overlay">

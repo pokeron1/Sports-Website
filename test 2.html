@@ -5,6 +5,14 @@
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
 <link rel="icon" href = "img/Logo.png"/>
 <title>2018 FIFA World Cup</title>
+<style type="text/css">
+.content-container{
+	background-image: url(img/brazil-vs-belgium.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
+
+</style>
 </head>
 <body id="body" onload="EnterThemes()">
 
@@ -17,9 +25,9 @@
 			<div class="overlay-content">
 				<div class="content-white">
 				<input id="colour1" placeholder="Background colour">
-				<input id="colour2" placeholder="text, and subtext background">
+				<input id="colour2" placeholder="Text, and subtext background">
 				<input id="colour3" placeholder="Content colour">
-				<input id="colour4" placeholder="header, overlays and outlines.">
+				<input id="colour4" placeholder="Header, overlays and outlines.">
 				<input id="colour5" placeholder="Buttons"> 
 				<input id="colour6" placeholder="close buttons.">
 				<input type="submit" name="submit">
@@ -31,15 +39,7 @@
 	</div>
 	<div class="navbar">
 	<span class="dropbutton" onclick="LinkTo('index.html')">Home</span>
-	<div class="dropdown" onclick="LinkTo('groups.html')">
-		<a class="dropbutton">Groups</a>
-		<div class="dropdown-content">
-			<span class="dropdown-item">England</span>
-			<span class="dropdown-item">France</span>
-			<span class="dropdown-item">Croatia</span>
-			<span class="dropdown-item">Belgium</span>
-		</div>
-	</div>
+		<span class="dropbutton" onclick="LinkTo('groups.html')">Groups</span>
 	<span class="dropbutton">Match Report</span>
 	<span class="dropbutton" onclick="ChangeTheme()">Change theme</span>
 	<span class="dropbutton" onclick="ShowOverlay2()">Customise</span>
@@ -96,7 +96,9 @@ But Belgium held on and the much-maligned Roberto Martinez will lead his side in
 - Belgium are now unbeaten in 24 games in all competitions (W19 D5).
 - Romelu Lukaku has been directly involved in 20 goals in his last 13 appearances for Belgium, scoring 17 and assisting three.
 <br /><br />
-</div></div></div>
+</div></div>
+<div class="footer">This website was created by Mohammed Raunaq Shah Foridi, Dylan Datta, Samay Patel and Akshat Sharma, and is therefore protected by copyright under English law. This website uses cookies in order to save custom combinations of colours - 'themes' and remember them between pages. If you do not want this, sorry, we can't exactly change it that easily.</div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>

@@ -34,6 +34,19 @@ body{
 	}
 }
 
+.footer{
+	background-color: var(--colour4);
+	color: var(--colour2);
+	display: inline-block;
+	bottom: 0px;
+	min-height: 100px;
+	margin-top: 20px;
+	font-size: 18px;
+	border: 2px solid var(--colour1);
+	border-radius: 4px;
+	padding: 20px;
+}
+
 /*Heading*/
 
 .heading-container{
@@ -120,7 +133,6 @@ body{
 	margin-top: 20px;
 	margin-bottom: 20px;
 	display: inline-block;
-	border: 2px solid var(--colour4);
 }
 
 .content{

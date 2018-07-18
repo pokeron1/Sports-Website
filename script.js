@@ -142,6 +142,11 @@
 		textToChange.innerHTML = changeTo.innerHTML;
 	}
 
+	function ChangeAndOpen(id, id2){
+		ShowOverlay();
+		ChangeText(id, id2);
+	}
+
 	function ChangeTheme(){
 		activeTheme^=1;
 		document.cookie = `theme=${activeTheme};path=/`;
