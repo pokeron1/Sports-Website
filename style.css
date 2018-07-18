@@ -93,7 +93,7 @@ body{
 	border: 2px solid #b1bfca;
 	animation-name: Subtext;
 	animation-duration: 1000ms;
-	background-color: var(--colour2);
+	background-color: var(--colour3);
 	display: inline-block;
 }
 
@@ -124,6 +124,7 @@ body{
 	color: #000000;
 	font-size: 20px;
 	display: inline-block;
+	color: var(--colour2);
 	animation-name: Content;
 	animation-duration: 1000ms;
 }
@@ -141,6 +142,7 @@ body{
 	float: right;
 	margin-left: 50%;
 	border: 2px solid var(--colour4);
+	color: var(--colour2);
 	width: 50%;
 	clear: both;
 	padding: 20px;
@@ -167,10 +169,10 @@ body{
 
 .content-centred{
 	float: center;
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: 25%;
+	margin-left: 25%;
 	border: 2px solid var(--colour4);
-	width: 70%;
+	width: 50%;
 	clear: both;
 	padding: 20px;
 	margin: 20px;
@@ -365,6 +367,7 @@ body{
 .dropbutton {
 	--hover-color:var(--colour4);
 	color: var(--colour2);
+	text-align:center;
 	padding: 16px;
 	font-size: 16px;
 	border: none;
